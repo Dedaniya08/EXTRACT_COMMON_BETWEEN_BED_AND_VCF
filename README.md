@@ -5,7 +5,7 @@ This package can be used to extract the SNPs from VCF from a particular region i
 
 or the mentioned start and stop position in the BED file. This package also can be used to 
 
-extract the gene SNPs from the VCFfile.
+extract the gene SNPs from the VCFfile and create a database and store the snp.
 
 
 
@@ -30,6 +30,7 @@ This is a simple way to go, make sure you keep all the files in a single folder 
 well as the bed file.
 
 ```
+pip install sqlalchemy
 python ./commonsnpvcf.py sample_VCF.vcf sample_bed_file.bed Output_table;
 
 ```
@@ -43,9 +44,9 @@ The second argument after the VCF file is BED file, which has the start and stop
 which you can extract the SNP. Please the format of the bed file.
 
 
-And the third argument is the output file name, what you want to label. This file consist of the 
+And the third argument is the output file name, what you want to label. This will create a database in sql format 
 
-SNP from the VCf file for the desire start and stop in BED file.
+that consist of the SNP from the VCf file for the desire start and stop in BED file.
 
 
 
@@ -58,3 +59,4 @@ Please look at the sample VCF file and BED file for file format attached with th
 ## Contributing
 
 All comments and any kind of contribution is useful. The best way is to open an issue or make a pull request.
+
